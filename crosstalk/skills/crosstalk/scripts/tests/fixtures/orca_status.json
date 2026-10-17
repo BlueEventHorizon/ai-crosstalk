@@ -1,0 +1,1 @@
+{"id":"local-status","ok":true,"result":{"target":{"kind":"local"},"app":{"running":true,"pid":1000,"desktopWindowStatus":"available"},"runtime":{"state":"ready","reachable":true,"connectionState":"connected","runtimeId":"rt-sample","appVersion":"0.0.0"}}}

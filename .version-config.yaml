@@ -1,0 +1,39 @@
+# version_config_version: 1.0
+
+targets:
+  - name: crosstalk
+    version_file: crosstalk/.claude-plugin/plugin.json
+    version_path: version
+    scope:
+      - crosstalk/**
+    sync_files:
+      - path: .claude-plugin/marketplace.json
+        pattern: '"version": "{version}"'
+        filter: '"name": "crosstalk"'
+
+  - name: marketplace
+    version_file: .claude-plugin/marketplace.json
+    version_path: metadata.version
+    scope:
+      - .claude-plugin/marketplace.json
+      - docs/**
+      - .github/workflows/ci.yml
+      - .gitignore
+      - CHANGELOG.md
+      - CLAUDE.md
+      - README.md
+      - dprint.json
+
+changelog:
+  file: CHANGELOG.md
+  format: keep-a-changelog
+  git_log_auto: false
+  section_per_target: true
+
+git:
+  # main へマージした時点で marketplace 版のタグを 1 本だけ付ける
+  # (prefix なし・v なし)。プラグインごとのタグは付けない。
+  tag_format: "{version}"
+  commit_message: "chore: bump {target} to {version}"
+  auto_tag: false
+  auto_commit: false

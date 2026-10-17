@@ -1,0 +1,6 @@
+{"id":"req-ps","ok":true,"result":{"worktrees":[
+{"workspaceKind":"git","worktreeId":"repo-a::/work/sample-a","repoId":"repo-a","hostId":"local","repo":"sample-repo-a","path":"/work/sample-a","branch":"refs/heads/feature-one","isMainWorktree":true,"agents":[{"paneKey":"tab-1:leaf-1","state":"working","agentType":"claude"}]},
+{"workspaceKind":"git","worktreeId":"repo-a::/work/sample-a-wt","repoId":"repo-a","hostId":"local","repo":"sample-repo-a","path":"/work/sample-a-wt","branch":"refs/heads/feature-two","isMainWorktree":false,"agents":[{"paneKey":"tab-2:leaf-2","state":"done","agentType":"claude"}]},
+{"workspaceKind":"git","worktreeId":"repo-b::/work/sample-b","repoId":"repo-b","hostId":"local","repo":"sample-repo-b","path":"/work/sample-b","branch":"refs/heads/main","isMainWorktree":true,"agents":[]},
+{"workspaceKind":"git","worktreeId":"repo-b::/tmp/sample-scratch","repoId":"repo-b","hostId":"local","repo":"sample-repo-b","path":"/tmp/sample-scratch","branch":"","isMainWorktree":false,"agents":[{"paneKey":"tab-4:leaf-4","state":"done","agentType":"claude"}]}
+],"hostScope":{"hostIds":["local"],"omittedHostIds":[]},"totalCount":4,"truncated":false}}

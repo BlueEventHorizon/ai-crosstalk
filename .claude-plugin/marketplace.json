@@ -1,0 +1,19 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "ai-crosstalk",
+  "owner": { "name": "BlueEventHorizon" },
+  "metadata": {
+    "description": "Claude Code plugin for sending questions and notices between running AI coding sessions",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "crosstalk",
+      "source": "./crosstalk",
+      "description": "Sends a question or notice from one AI coding session to another running session (herdr, Orca, or Claude Code cross-session messaging) after user approval, and presents the reply",
+      "version": "0.1.0",
+      "author": { "name": "BlueEventHorizon" },
+      "homepage": "https://github.com/BlueEventHorizon/ai-crosstalk"
+    }
+  ]
+}

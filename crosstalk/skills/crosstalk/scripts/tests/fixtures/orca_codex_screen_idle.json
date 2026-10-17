@@ -1,0 +1,27 @@
+{
+ "id": "req-read",
+ "ok": true,
+ "result": {
+  "terminal": {
+   "handle": "term-0003",
+   "status": "running",
+   "tail": [
+    "• sample output line",
+    "  └ sample detail",
+    "",
+    "• sample reply text",
+    "",
+    "› Ask Codex to do anything",
+    "  sample-model · ~/sample/path",
+    "  ← sample hint · ? for shortcuts"
+   ],
+   "truncated": false,
+   "limited": false,
+   "oldestCursor": "0",
+   "nextCursor": "10",
+   "latestCursor": "10",
+   "returnedLineCount": 8,
+   "source": "screen"
+  }
+ }
+}

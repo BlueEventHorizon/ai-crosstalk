@@ -1,0 +1,7 @@
+{"id":"req-tl","ok":true,"result":{"terminals":[
+{"handle":"term-0001","worktreeId":"repo-a::/work/sample-a","worktreePath":"/work/sample-a","branch":"refs/heads/feature-one","tabId":"tab-1","leafId":"leaf-1","title":"sample-title-a","connected":true,"writable":true,"agentIdentity":"claude"},
+{"handle":"term-0002","worktreeId":"repo-a::/work/sample-a-wt","worktreePath":"/work/sample-a-wt","branch":"refs/heads/feature-two","tabId":"tab-2","leafId":"leaf-2","title":"sample-title-b","connected":true,"writable":true,"agentIdentity":"claude"},
+{"handle":"term-0003","worktreeId":"repo-b::/work/sample-b","worktreePath":"/work/sample-b","branch":"refs/heads/main","tabId":"tab-3","leafId":"leaf-3","title":"sample-title-c","connected":true,"writable":true,"agentIdentity":"codex"},
+{"handle":"term-0004","worktreeId":"repo-b::/tmp/sample-scratch","worktreePath":"/tmp/sample-scratch","branch":"","tabId":"tab-4","leafId":"leaf-4","title":"sample-title-d","connected":true,"writable":true,"agentIdentity":"claude"},
+{"handle":"term-0005","worktreeId":"repo-b::/work/sample-b","worktreePath":"/work/sample-b","branch":"refs/heads/main","tabId":"tab-5","leafId":"leaf-5","title":"sample-title-e","connected":true,"writable":true}
+],"hostScope":{"hostIds":["local"],"omittedHostIds":[]},"totalCount":5,"truncated":false}}
