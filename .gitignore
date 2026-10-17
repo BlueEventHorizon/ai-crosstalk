@@ -1,0 +1,26 @@
+# ===========================
+
+# 汎用のファイル一時配置場所
+.temp/
+
+# プロジェクト外参照
+**/external_references/
+**/external_references
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Generic ignore
+*.bak
+.DS_Store
+
+# Claude Code
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+.claude/.temp/
+.claude/doc-advisor/index/
+
+# テスト用一時ディレクトリ（tempfile.mkdtemp の出力先・/tmp 不可環境のフォールバック）
+tests/**/.temp/

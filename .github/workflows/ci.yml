@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+
+jobs:
+  test:
+    name: installer test + lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install rsync (required by installer)
+        run: sudo apt-get update && sudo apt-get install -y rsync
+
+      - name: Verify python3 + bash
+        run: |
+          python3 --version
+          bash --version | head -1
+
+      - name: Validate JSON manifests
+        run: |
+          set -euo pipefail
+          for f in .claude-plugin/marketplace.json plugins/*/.claude-plugin/plugin.json; do
+            [ -f "$f" ] || continue
+            echo "validate: $f"
+            python3 -c "import json,sys; json.load(open(sys.argv[1]))" "$f"
+          done
+
+      - name: Validate that templates and committed scripts are in sync
+        run: |
+          diff -u plugins/meta/skills/plugin-installer-creator/templates/install_copy.sh \
+                  scripts/plugin-installer/install_copy.sh
+          diff -u plugins/meta/skills/plugin-installer-creator/templates/install_copy_codex.sh \
+                  scripts/plugin-installer/install_copy_codex.sh
+
+      - name: shellcheck
+        run: |
+          sudo apt-get install -y shellcheck
+          shellcheck --severity=error \
+            plugins/meta/skills/plugin-installer-creator/templates/install_copy.sh \
+            plugins/meta/skills/plugin-installer-creator/templates/install_copy_codex.sh \
+            scripts/plugin-installer/install_copy.sh \
+            scripts/plugin-installer/install_copy_codex.sh
+
+      - name: make test
+        run: make test
