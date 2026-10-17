@@ -1,0 +1,11 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "crosstalk",
+  "description": "Sends a question or notice from one AI coding session to another running session (herdr, Orca, or Claude Code cross-session messaging) after user approval, and presents the reply",
+  "version": "0.1.0",
+  "author": { "name": "BlueEventHorizon" },
+  "license": "MIT",
+  "homepage": "https://github.com/BlueEventHorizon/ai-crosstalk",
+  "repository": "https://github.com/BlueEventHorizon/ai-crosstalk",
+  "keywords": ["multi-agent", "cross-session", "herdr", "orca", "claude-code", "codex"]
+}
